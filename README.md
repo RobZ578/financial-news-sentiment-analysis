@@ -86,7 +86,7 @@ Copy code
 ## How to Run
 
 Clone repository:
-git clone https://github.com/USERNAME/financial-news-sentiment-analysis.git
+git clone https://github.com/RobZ578/financial-news-sentiment-analysis.git
 cd financial-news-sentiment-analysis
 
 sql
