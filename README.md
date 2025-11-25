@@ -1,195 +1,136 @@
-Predicting Price Moves with News Sentiment
+# Predicting Price Moves with News Sentiment
 
-Financial News + Stock Price Integration | NLP + Quantitative Analysis
+## Project Overview
+This repository contains the Week-1 project for Nova Financial Insights, focused on analyzing financial news headlines, computing sentiment, aligning data with stock price movements, and evaluating correlations between news sentiment and stock returns.
 
-This repository contains my Week-1 project for Nova Financial Insights.
-The goal is to analyze financial news headlines, compute sentiment, align the data with stock movements, and evaluate correlations between sentiment and stock price returns.
+The goal is to understand how news sentiment affects stock price movements. The project involves:
 
-Project Overview
+- Exploratory Data Analysis (EDA) on financial news headlines
+- Sentiment analysis using NLP tools (TextBlob/NLTK)
+- Computing technical indicators using TA-Lib (SMA, EMA, RSI, MACD)
+- Aligning news and stock price data by date
+- Calculating daily stock returns
+- Correlation analysis between sentiment and price movements
+- Providing actionable insights based on the analysis
 
-The project focuses on:
+---
 
-Exploratory Data Analysis (EDA) on financial news
+## Repository Structure
 
-Sentiment analysis on headlines
-
-Quantitative analysis using TA-Lib and PyNance
-
-Technical indicators (RSI, SMA, EMA, MACD)
-
-Computing daily stock returns
-
-Correlation analysis between sentiment and price movement
-
-Building a reproducible data-science environment with GitHub version control
-
-Repository Structure
 ├── .vscode/
-│   └── settings.json
+│ └── settings.json
 ├── .github/
-│   └── workflows/
-│       └── unittests.yml
+│ └── workflows/
+│ └── unittests.yml
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
 ├── src/
-│   ├── __init__.py
-│   └── data_processing.py
+│ ├── init.py
+│ └── data_processing.py
 ├── notebooks/
-│   ├── __init__.py
-│   └── eda.ipynb
+│ ├── init.py
+│ └── eda.ipynb
 ├── tests/
-│   ├── __init__.py
-│   └── test_utils.py
+│ ├── init.py
+│ └── test_utils.py
 └── scripts/
-    ├── __init__.py
-    └── run_analysis.py
+├── init.py
+└── run_analysis.py
 
-Tasks Completed
-Task 1 — Git, GitHub, EDA, Environment Setup
+markdown
+Copy code
 
-Created GitHub repo with recommended folder structure
+---
 
-Created branches: task-1, task-2, task-3
+## Tasks Completed
 
-Performed EDA:
+### Task 1 — Git, GitHub, EDA, Environment Setup
+- Created GitHub repository with proper folder structure
+- Created branches: `task-1`, `task-2`, `task-3`
+- Performed EDA:
+  - Headline length statistics
+  - Article distribution by publisher
+  - Publication frequency trends over time
+  - Keyword extraction and topic patterns
+- Configured CI/CD workflow with GitHub Actions
+- Set up Python environment with dependencies
 
-Headline length statistics
+### Task 2 — Quantitative Analysis (TA-Lib & PyNance)
+- Loaded and cleaned historical stock price data
+- Calculated technical indicators:
+  - SMA / EMA
+  - RSI
+  - MACD
+- Created visualizations for indicators vs. stock price
+- Continued development in `task-2` branch
 
-Article distribution by publisher
+### Task 3 — Sentiment & Correlation Analysis
+- Performed sentiment analysis on headlines (TextBlob/NLTK)
+- Normalized timestamps and aligned stock + news datasets
+- Calculated daily returns and aggregated daily sentiment
+- Computed Pearson correlation coefficient between sentiment and stock returns
+- Merged completed work into `main` via Pull Request
 
-Publication frequency over time
+---
 
-Keyword extraction and topic patterns
+## Methods Used
 
-Set up CI/CD workflow using GitHub Actions
+- **Sentiment Analysis:** TextBlob polarity scoring, aggregated daily sentiment
+- **Technical Indicators:** SMA, EMA, RSI, MACD
+- **Stock Movement:** Daily returns (percentage change in Close price)
+- **Correlation:** Pearson correlation coefficient, scatter plots for trend inspection
 
-Created and configured Python environment
+---
 
-Task 2 — Quantitative Analysis (TA-Lib & PyNance)
-
-Loaded and cleaned stock price data
-
-Calculated technical indicators:
-
-SMA/EMA
-
-RSI
-
-MACD
-
-Visualized technical indicators
-
-Continued development in task-2 and merged using Pull Request
-
-Task 3 — Sentiment & Correlation Analysis
-
-Performed sentiment analysis using TextBlob/NLTK
-
-Cleaned and normalized timestamps
-
-Merged news dataset with stock dataset based on dates
-
-Calculated daily returns
-
-Aggregated daily sentiment
-
-Performed Pearson correlation analysis
-
-Merged completed work into main using Pull Request
-
-Methods Used
-Sentiment Analysis
-
-TextBlob polarity scoring
-
-Aggregated average daily sentiment
-
-Technical Indicators (TA-Lib)
-
-Simple Moving Average (SMA)
-
-Exponential Moving Average (EMA)
-
-Relative Strength Index (RSI)
-
-Moving Average Convergence Divergence (MACD)
-
-Stock Movement
-
-Daily returns (percentage change)
-
-Correlation
-
-Pearson correlation coefficient
-
-Scatter plots and trend inspection
-
-Reports
-Interim Report
-
-Covers Task 1 and partial Task 2
-
-Maximum length: 3 pages
-
-Final Report
-
-Covers all tasks
-
-Up to 10 pages including plots
-
-Medium-style publication formatting
-
-How to Run the Project
+## How to Run
 
 Clone repository:
-
 git clone https://github.com/USERNAME/financial-news-sentiment-analysis.git
 cd financial-news-sentiment-analysis
 
+sql
+Copy code
 
 Create and activate environment:
-
 python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
+source venv/bin/activate # macOS/Linux
+venv\Scripts\activate # Windows
 
+yaml
+Copy code
 
 Install dependencies:
-
 pip install -r requirements.txt
 
+yaml
+Copy code
 
 Run analysis:
-
 python scripts/run_analysis.py
 
-Tools and Technologies
+yaml
+Copy code
 
-Python 3
+---
 
-Pandas, NumPy
+## Tools and Technologies
 
-TA-Lib
+- Python 3
+- Pandas, NumPy
+- TA-Lib
+- PyNance
+- NLTK / TextBlob
+- Matplotlib / Seaborn
+- Git & GitHub
+- GitHub Actions (CI/CD)
 
-PyNance
+---
 
-NLTK / TextBlob
+## References
 
-Matplotlib / Seaborn
-
-Git & GitHub
-
-GitHub Actions (CI/CD)
-
-References
-
-Investopedia — Stock Market and Analysis
-
-TextBlob Documentation
-
-TA-Lib Python Docs
-
-PyNance GitHub
-
-Atlassian Git, CI/CD Guides  
+- https://www.investopedia.com/terms/s/stockmarket.asp
+- https://textblob.readthedocs.io/en/dev/
+- https://mrjbq7.github.io/ta-lib/
+- https://github.com/mqandil/pynance
+- https://www.atlassian.com/git
